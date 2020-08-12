@@ -1,0 +1,28 @@
+﻿<ContentPage x:Class="Jenx.Bluetooth.UartOverGatt.Client.BluetoothDataPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="Talking to BLE UART"
+             Visual="Material"
+             mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout Padding="10"
+                     Orientation="Vertical">
+            <Button x:Name="InitButton"
+                    Margin="10"
+                    Clicked="InitalizeCommandButton_Clicked"
+                    Text="Explicit Init" />
+            <Button x:Name="ScanButton"
+                    Margin="10"
+                    Clicked="SendCommandButton_Clicked"
+                    Text="Send command" />
+            <Entry x:Name="CommandTxt"
+                   Text="ATZ" />
+            <ScrollView VerticalOptions="StartAndExpand">
+                <Label x:Name="Output"
+                       VerticalOptions="CenterAndExpand" />
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
